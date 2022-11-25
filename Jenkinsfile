@@ -12,6 +12,12 @@ pipeline {
             }
         }
         
+        stage('Clean') {
+            steps {
+                bat './mvnw clean'
+            }
+        }
+        
         stage('Compile') {
             steps {
                 bat './mvnw compile'
